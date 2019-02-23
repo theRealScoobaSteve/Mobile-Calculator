@@ -1,12 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export const NumberButton = ({ children }) => (
+export default (NumberButton = ({ children }) => (
   <View style={styles.container}>
     <Text style={styles.text}>{children}</Text>
   </View>
-)
-
+));
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +15,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "#c8c9cb",
     borderWidth: 0.5,
-    borderColor: 'black',
+    borderColor: "black"
   },
   text: {
     textAlign: "center",

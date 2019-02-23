@@ -13,8 +13,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-end",
     backgroundColor: "black",
-    padding: 10,
-    textAlign: "center"
+    padding: 10
   },
   text: {
     color: "white",
