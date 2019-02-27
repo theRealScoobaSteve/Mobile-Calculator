@@ -5,7 +5,8 @@ import { Provider } from "react-redux";
 
 import SignButton from "./Containers/SignButton";
 import NumberButton from "./Containers/NumberButton";
-import Zero from "./Containers/Zero";
+import BigHorButton from "./Containers/BigHorButton";
+import BigHorSignButton from "./Containers/BigHorSignButton";
 import Row from "./Components/Row";
 import Output from "./Containers/Output";
 
@@ -22,16 +23,15 @@ export default class App extends Component {
         <View style={styles.container}>
           <Output />
           <Row>
-            <SignButton>c</SignButton>
-            <SignButton>+/-</SignButton>
+            <BigHorSignButton>c</BigHorSignButton>
             <SignButton>%</SignButton>
-            <SignButton>÷</SignButton>
+            <SignButton>/</SignButton>
           </Row>
           <Row>
             <NumberButton>7</NumberButton>
             <NumberButton>8</NumberButton>
             <NumberButton>9</NumberButton>
-            <SignButton>x</SignButton>
+            <SignButton>*</SignButton>
           </Row>
           <Row>
             <NumberButton>4</NumberButton>
@@ -46,9 +46,8 @@ export default class App extends Component {
             <SignButton>+</SignButton>
           </Row>
           <Row>
-            <Zero>0</Zero>
-            <NumberButton>.</NumberButton>
-            <SignButton>=</SignButton>
+            <BigHorButton>0</BigHorButton>
+            <BigHorSignButton>=</BigHorSignButton>
           </Row>
         </View>
       </Provider>
