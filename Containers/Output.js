@@ -17,6 +17,9 @@ class Output extends Component {
 
 function mapStateToProps({ data }) {
   data = data.join("");
+  if (data.length < 1) {
+    data = "0";
+  }
   if (data.match(/[\/\+\-\*\%]/g) && !data.match(/[=]/g)) {
     data = data.replace(/[0-9]{1,}(?=[\/\+\-\*\%])([\/\+\-\*])/g, "");
   }
