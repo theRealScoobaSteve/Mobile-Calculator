@@ -17,13 +17,10 @@ class Output extends Component {
 
 function mapStateToProps({ data }) {
   data = data.join("");
-  console.log("DATAPRE: ", data);
   if (data.match(/[\/\+\-\*\%]/g) && !data.match(/[=]/g)) {
     data = data.replace(/[0-9]{1,}(?=[\/\+\-\*\%])([\/\+\-\*])/g, "");
   }
-  console.log("DATAMID: ", data);
   if (data.match(/[=]/g)) {
-    console.log("DATAPOST: ", data);
     data = math.eval(data.replace(/=/g, ""));
     data = math.format(data, { precision: 8 });
   }
