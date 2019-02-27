@@ -7,7 +7,7 @@ import { updateExpression } from "./Actions";
 class BigHorSignButton extends Component {
   handlePress = () => {
     const { updateExpression, children } = this.props;
-    updateExpression(parseInt(children));
+    updateExpression(children);
   };
 
   render() {
